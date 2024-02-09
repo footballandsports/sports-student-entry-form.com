@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Registration and Sports Entry Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #800080; /* Violet color */
+    }
+    form {
+      max-width: 400px;
+      margin: 20px auto;
+      background-color: white; /* Set the form background color */
+      padding: 20px;
+      border-radius: 10px; /* Optional: Add border-radius for a rounded appearance */
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+    }
+    input {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 12px;
+      box-sizing: border-box;
+    }
+    button {
+      cursor: pointer;
+    }
+    .new-user-fields, .page3-form {
+      display: block; /* Show the registration form by default */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- User Registration Page -->
+  <form id="page3Form" class="page3-form">
+    <label for="fullName">Full Name:</label>
+    <input type="text" id="fullName" required>
+
+    <label for="age">Age (dd/mm/yyyy):</label>
+    <input type="text" id="age" required>
+
+    <label for="category">Category:</label>
+    <select id="category" required>
+      <option value="U-17">U-17</option>
+      <option value="U-18">U-18</option>
+      <option value="U-19">U-19</option>
+    </select>
+
+    <label for="userEmail">Email ID:</label>
+    <input type="email" id="userEmail" required>
+
+    <label for="userPassword">Email Password:</label>
+    <input type="password" id="userPassword" required>
+
+    <label for="schoolName">School/College Name:</label>
+    <input type="text" id="schoolName" required>
+
+    <label for="schoolAddress">School/College Address:</label>
+    <input type="text" id="schoolAddress" required>
+
+    <label for="gameCategory">Game Category:</label>
+    <select id="gameCategory" required>
+      <optgroup label="Indoor Games">
+        <option value="KABBADI">KABBADI</option>
+        <option value="BADMINTON">BADMINTON</option>
+        <option value="VOLLEYBALL">VOLLEYBALL</option>
+        <option value="TENNIS">TENNIS</option>
+        <option value="BASKETBALL">BASKETBALL</option>
+      </optgroup>
+      <optgroup label="Outdoor Games">
+        <option value="CRICKET">CRICKET</option>
+        <option value="FOOTBALL">FOOTBALL</option>
+        <option value="BASEBALL">BASEBALL</option>
+      </optgroup>
+    </select>
+
+    <label for="gender">Gender:</label>
+    <select id="gender" required>
+      <option value="MALE">Male</option>
+      <option value="FEMALE">Female</option>
+    </select>
+
+    <button type="button" onclick="submitForm()">Submit</button>
+  </form>
+
+  <script>
+    function submitForm() {
+      // You can handle form submission logic here
+      alert('Form submitted successfully!');
+      resetForm(); // Call the function to reset the form
+    }
+
+    function resetForm() {
+      document.getElementById('page3Form').reset();
+    }
+  </script>
+</body>
+</html>
